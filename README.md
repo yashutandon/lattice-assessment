@@ -38,14 +38,14 @@ A responsive, real-time and historical weather analytics application built with 
 
 | Tool | Version | Purpose |
 |------|---------|---------|
-| React | 18.3.x | UI framework |
-| TypeScript | 5.7.x | Type safety |
-| Vite | 6.x | Build tool |
-| Tailwind CSS | 3.4.x | Styling |
-| Recharts | 2.15.x | Data visualization |
-| React Router | 6.28.x | Client-side routing |
-| date-fns | 3.6.x | Date utilities |
-| lucide-react | 0.474.x | Icons |
+| React | 19.2.4 | UI framework |
+| TypeScript | 5.9.3 | Type safety |
+| Vite | 8.0.1 | Build tool |
+| Tailwind CSS | 4.2.2 | Styling |
+| Recharts | 3.8.0 | Data visualization |
+| React Router | 7.13.1 | Client-side routing |
+| date-fns | 4.1.0 | Date utilities |
+| lucide-react | 0.577.0 | Icons |
 
 ## 📡 APIs Used
 
@@ -58,13 +58,13 @@ A responsive, real-time and historical weather analytics application built with 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm 9+
 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/weather-insights.git
+git clone  https://github.com/yashutandon/lattice-assessment
 cd weather-insights
 
 # Install dependencies
@@ -77,17 +77,18 @@ npm run dev
 Open `http://localhost:5173` in your browser.
 
 ### Build for Production
-``bash
+```bash
 npm run build
 npm run preview
 ```
 
 ## 📁 Project Structure
 
+```
 src/
 ├── components/
 │   ├── charts/          # Hourly chart components
-│   ├── historical/      # Historical chart components  
+│   ├── historical/      # Historical chart components
 │   ├── layout/          # Navbar + Layout wrapper
 │   ├── ui/              # Reusable UI primitives
 │   └── weather/         # Weather metric display components
