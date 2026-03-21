@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-surface-500: #334155;
+  --color-surface-600: #1e293b;
+
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+}
+
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-900 text-gray-100 font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-700/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl;
+  }
+
+  .metric-value {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  .metric-label {
+    @apply text-xs font-medium text-gray-400 uppercase tracking-wider;
+  }
+
+  .chart-scroll-wrapper {
+    @apply overflow-x-auto pb-2;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chart-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-500 text-white font-medium px-4 py-2 rounded-lg
+           transition-all duration-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-600 hover:bg-surface-500 text-gray-200 font-medium px-4 py-2 rounded-lg
+           transition-all duration-200 text-sm border border-gray-600/50;
+  }
+
+  .input-field {
+    @apply bg-surface-600 border border-gray-600/50 text-gray-100 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           transition-all duration-200;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+  }
+}
+
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .border-glow {
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+  }
+}
