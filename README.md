@@ -31,7 +31,7 @@ A responsive, real-time and historical weather analytics application built with 
 - All charts support **horizontal scrolling** and **Brush zoom**
 - Fully **mobile-responsive** (responsive grid layouts)
 - **Dark theme** with glassmorphism card design
-- **500ms performance** via `Promise.all` concurrent fetching + in-memory caching (5 min TTL)
+- **In-memory caching** (5 min TTL) for fast repeated lookups
 - Clean, modular TypeScript components
 
 ## 🛠️ Tech Stack
@@ -64,7 +64,7 @@ A responsive, real-time and historical weather analytics application built with 
 ### Installation
 ```bash
 # Clone the repository
-git clone  https://github.com/yashutandon/lattice-assessment
+git clone https://github.com/your-username/weather-insights.git
 cd weather-insights
 
 # Install dependencies
@@ -102,7 +102,7 @@ src/
 
 ## ⚡ Performance Approach
 
-- **Concurrent fetching:** Weather + Air Quality APIs called in parallel via `Promise.all`
+- **Sequential fetching:** Weather + Air Quality APIs fetched with individual `await` calls
 - **In-memory cache:** 5-minute TTL keyed by `{lat}:{lon}:{date}` to avoid redundant requests
 - **Code splitting:** Pages lazy-loaded via `React.lazy` + `Suspense`
 - **Manual chunk splitting:** Vendor, charts, and utility bundles separated in Vite config
